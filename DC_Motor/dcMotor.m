@@ -10,3 +10,4 @@ P_motor = K/((J*s+b)*(L*s+R)+K^2);
 % disp(P_motor);
 
 step(P_motor);
+ramp(P_motor);
