@@ -30,9 +30,11 @@ kp = 100;
 ki = 200;
 kd = 10;
 
-controller = pid(kp, ki, kd);
+C = (kp*s + ki + kd*s^2)/s;
 
-clsys = feedback(controller*P_motor, 1);
+%controller = pid(kp, ki, kd);
+
+clsys = feedback(C*P_motor, 1);
 t = 0:0.01:4;
 step(clsys, t);
 grid
