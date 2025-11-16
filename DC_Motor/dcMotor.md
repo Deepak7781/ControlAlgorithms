@@ -36,40 +36,40 @@ $$ K_tI_a(t) = J\frac{d\omega(t)}{dt} + B\omega(t) \tag{2}$$
 
 Electrical equation in s-domain
 
-$$ V_a(s) = R_aI_a(s) + L_asI_a(s) + K_b\omega(s)$$
+$$ V_a(s) = R_aI_a(s) + L_asI_a(s) + K_b\omega(s) $$
 solve for $I_a(s)$
 $$
     I_a(s)(R_a + L_as) = V_a(s) - K_b\omega(s)
 
 $$
-$$  I_a(s) = \frac{V_a(s) - K_b\omega(s)}{R_a+L_as}$$
+$$  I_a(s) = \frac{V_a(s) - K_b\omega(s)}{R_a+L_as} $$
 
 Mechanical Equation in s-domain
 
-$$ K_tI_a(s) = Js\omega(s) + B\omega(s)$$
+$$ K_tI_a(s) = Js\omega(s) + B\omega(s) $$
 
 solve for $\omega(s)$
 
-$$ K_tI_a(s) = (Js + B)\omega(s)$$
+$$ K_tI_a(s) = (Js + B)\omega(s) $$
 
-$$ \omega(s) = \frac{K_tI_a(s)}{Js+B}$$
+$$ \omega(s) = \frac{K_tI_a(s)}{Js+B} $$
 
 substitue $I_a(s) $ in the above equation
 
-$$\omega(s) = \frac{K_t}{Js+B}\frac{V_a(s) - K_b\omega(s)}{R_a + L_as}$$
+$$ \omega(s) = \frac{K_t}{Js+B}\frac{V_a(s) - K_b\omega(s)}{R_a + L_as} $$
 
-$$\omega(s) (R_a + L_as) (Js+B) = [V_a(s) - K_b\omega(s)]K_t$$
+$$ \omega(s) (R_a + L_as) (Js+B) = [V_a(s) - K_b\omega(s)]K_t $$
 
-$$ \omega(s) (R_a + L_as) (Js+B) = [K_tV_a(s) - K_bK_t\omega(s)]$$
+$$ \omega(s) (R_a + L_as) (Js+B) = [K_tV_a(s) - K_bK_t\omega(s)] $$
 
-$$\omega(s) [(R_a + L_as) (Js+B) + K_bK_t] =K_tV_a(s)$$
+$$ \omega(s) [(R_a + L_as) (Js+B) + K_bK_t] =K_tV_a(s)$$
 
-$$\frac{\omega(s)}{V_a(s)} = \frac{K_t}{(R_a + L_as) (Js+B) + K_bK_t} \tag{3}$$
+$$ \frac{\omega(s)}{V_a(s)} = \frac{K_t}{(R_a + L_as) (Js+B) + K_bK_t} \tag{3} $$
 
 $(3)$ is the Transfer Function for an armature controlled DC motor
 
 In SI units $K_t = K_b = K$ as we use in the simulation
 
-$$\frac{\omega(s)}{V_a(s)} = \frac{K}{(R_a + L_as) (Js+B) + K^2} \tag{4}$$
+$$ \frac{\omega(s)}{V_a(s)} = \frac{K}{(R_a + L_as) (Js+B) + K^2} \tag{4} $$
 
 $(4)$ is implemented in MATLAB and Simulink.
