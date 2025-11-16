@@ -62,6 +62,7 @@ To maintain a non-zero output voltage (needed to overcome motor driction and bac
 Example:
 
 The motor may need 2 V to run at 1000 rpm. But when the motor is at the reference speed, the error is zero.
+
 $$
     u_p = K_p\cdot0 = 0
 $$
@@ -69,14 +70,17 @@ $$
 So the motor cannot keep running, eventually the speed drops and the error reappears, so the P provides the needed 2 V.
 
 This leads to an equilibrium point where:
+
 $$
     u_p = K_pe_{ss}
 $$
 
 Error at steady state is
+
 $$
     e_{ss} = u_{needed}/K_p
 $$
+
 Hence, 
 
 * Larger $K_p$ &rarr; smaller error 
@@ -108,6 +112,7 @@ $$
 * But I reacts to past acccumulated error
 
 Even if error is tiny:
+
 $$
     u_I(t) = K_I (50t)
 $$
@@ -140,9 +145,11 @@ Derivative looks at the slope the error curve
 Example:
 
 If motor speed is increasing quicking and approaching the setpoint, error is decreasing rapidly
+
 $$
     \frac{de(t)}{dt}
 $$
+
 This means:
 
 * Error is heading toward zero too fast, so possible overshoot.
@@ -168,6 +175,7 @@ Mathematically,it counteracts high frequency changes:
 **Why D is sensitive to noise**
 
 Error signal directly differentiates noise:
+
 $$
     \frac{d(noise)}{dt} \approx \text{huge spikes}
 $$
