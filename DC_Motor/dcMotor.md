@@ -60,7 +60,7 @@ $$ K_tI_a(s) = (Js + B)\omega(s) $$
 
 $$ \omega(s) = \frac{K_tI_a(s)}{Js+B} $$
 
-substitue $I_a(s) $ in the above equation
+substitue $ I_a(s) $ in the above equation
 
 $$ \omega(s) = \frac{K_t}{Js+B}\frac{V_a(s) - K_b\omega(s)}{R_a + L_as} $$
 
