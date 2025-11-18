@@ -14,4 +14,10 @@ s = tf('s');
 
 plant = Ktf/((J*s + B)*(Rf + s*Lf));
 
-disp(plant);
+% disp(plant);
+
+% plant_ss = ss(plant);
+
+% disp(plant_ss)
+
+step(plant);
