@@ -7,4 +7,7 @@ Demonstrate PID, LQR, MPC, and reinforcement learning-based controllers.
 
 ## Physical Systems
   - DC Motor
+      - Armature controlled DC Motor
+      - Field controlled DC Motor
+  
     
