@@ -16,8 +16,16 @@ plant = Ktf/((J*s + B)*(Rf + s*Lf));
 
 % disp(plant);
 
-% plant_ss = ss(plant);
+plant_ss = ss(plant);
 
 % disp(plant_ss)
 
 step(plant);
+
+Kp = 10;
+Ki = 2;
+Kd = 5;
+
+C = pid(Kp, Ki, Kd);
+
+G = feedback(C*plant_ss, 1);
