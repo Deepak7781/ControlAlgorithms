@@ -10,4 +10,6 @@ Demonstrate PID, LQR, MPC, and reinforcement learning-based controllers.
       - Armature controlled DC Motor
       - Field controlled DC Motor
   
-    
+## Servo Motor Position Control
+
+## Ball and Beam System
