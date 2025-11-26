@@ -13,3 +13,9 @@ Demonstrate PID, LQR, MPC, and reinforcement learning-based controllers.
 - Servo Motor Position Control
 
 - Ball and Beam System
+
+## Controll Algorithms
+
+- PID
+- LQR
+- RRT
