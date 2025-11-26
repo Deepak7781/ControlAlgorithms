@@ -14,7 +14,7 @@ Demonstrate PID, LQR, MPC, and reinforcement learning-based controllers.
 
 - Ball and Beam System
 
-## Controll Algorithms
+## Control Algorithms
 
 - PID
 - LQR
