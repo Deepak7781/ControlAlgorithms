@@ -27,23 +27,31 @@ The beam is massless or its inertia is included in the servo model (not consider
 
 ### Nonlinear Equations of Motion
 ### Ball Dynamics
+
 The ball experiences a gravitational force component along the inclined beam:
+
 $$ F_g = -m g \sin \alpha $$
+
 (directed towards the pivot for positive $\alpha$).
 For rolling without slipping, the ball's translational acceleration $\ddot{r}$ and rotational acceleration $\dot{\omega} = \ddot{r}/R$ are coupled.
 
  The total kinetic energy includes translation and rotation, leading to an effective inertia.
 From Newton's second law for translation:
+
 $$ m \ddot{r} = F_g - f $$
+
 where $f$ is the friction force providing torque for rotation.
 
 For rotation:
+
 $$ J \dot{\omega} = f R \implies f = \frac{J \ddot{r}}{R^2} $$
 
 Substitute:
+
 $$ m \ddot{r} = -m g \sin \alpha - \frac{J \ddot{r}}{R^2} $$
 
 $$ \ddot{r} \left( m + \frac{J}{R^2} \right) = -m g \sin \alpha $$
+
 $$ \ddot{r} = -\frac{m g \sin \alpha}{m + \frac{J}{R^2}} $$
 
 For a solid sphere:
@@ -85,19 +93,8 @@ where the gain $K = \frac{5 g d}{7 L}$.
 
 ### Typical Values
 
-$g = 9.81$ m/s²
-$d = L/2$, $L = 0.425$ m (common lab setup, e.g., Quanser)
-$ K \approx \frac{5 \times 9.81 \times (0.425/2)}{7 \times 0.425} \approx 1.5 \, \frac{\mathrm{m}}{\mathrm{rad}} $
+- $g = 9.81 m/s^2$
+- $d = L/2$
+-  $L = 0.425 m$ (common lab setup, e.g., Quanser)
+- $K \approx \frac{5 \times 9.81 \times (0.425/2)}{7 \times 0.425} \approx 1.5 \, \frac{\mathrm{m}}{\mathrm{rad}}$
 
-### Notes on Variations
-
-No Rolling (Slipping Ball): If the ball slides without rotating ($J = 0$), $K = \frac{g d}{L}$.
-Full System (Including Servo): Cascade with the DC servo motor transfer function (from armature voltage $V_a(s)$ to $\theta(s)$):
-$ G_{\text{full}}(s) = G_{\text{servo}}(s) \cdot G(s) $
-where $G_{\text{servo}}(s) \approx \frac{K_m}{s (\tau_m s + 1)}$ (second-order approximation).
-Stability: The double pole at $s = 0$ indicates marginal stability; any disturbance causes unbounded growth, necessitating feedback control (e.g., PID).
-
-Verification and Simulation
-This derivation aligns with standard references (e.g., Franklin's Feedback Control of Dynamic Systems).
-For simulation in MATLAB/Simulink or Python (using control library):
-matlab
