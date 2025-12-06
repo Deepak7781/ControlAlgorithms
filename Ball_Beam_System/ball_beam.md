@@ -10,12 +10,13 @@ This document derives the open-loop transfer function $G(s) = \frac{R(s)}{\Theta
 
 ### System Parameters
 
-$m$: Mass of the ball (kg)
-$R$: Radius of the ball (m)
-$g$: Acceleration due to gravity (m/s², ≈ 9.81)
-$J$: Moment of inertia of the ball about its center (for a solid sphere, $J = \frac{2}{5} m R^2$)
-$L$: Length of the beam (m)
-$d$: Distance from the pivot to the actuator attachment point (often $d = L/2$)
+- $m$: Mass of the ball (kg)
+
+- $R$: Radius of the ball (m)
+- $g$: Acceleration due to gravity (m/s², ≈ 9.81)
+- $J$: Moment of inertia of the ball about its center (for a solid sphere, $J = \frac{2}{5} m R^2$)
+- $L$: Length of the beam (m)
+- $d$: Distance from the pivot to the actuator attachment point (often $d = L/2$)
 
 ### Assumptions:
 
