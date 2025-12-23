@@ -57,7 +57,7 @@ How P actually works
 
 **Why P creates a steady-state error**
 
-To maintain a non-zero output voltage (needed to overcome motor driction and back-EMF) P needs non-zero error
+To maintain a non-zero output voltage (needed to overcome motor friction and back-EMF) P needs non-zero error
 
 Example:
 
