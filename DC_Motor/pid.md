@@ -28,7 +28,7 @@ Each term plays a unique role in shaping the system's response.
 - The **Integral** term eliminates steady-state error by accumulating error over time and providing long-term adjustment.
 - The **Derivative** term predicts system behavior by sensing how rapidly the error is changing and adds damping to reduce overshoot and oscillations.
 
-Because these three actions complement each other, a PID controller can achieve fast response, high accuracy, and stab;e operation even when system dynaics are nonlinear or uncertain. It does not  require complex optimization or advanced modeliing, which makes ir extremely practical for real-world systems sucha as DC motors, where loads and operating conditions frequently change.
+Because these three actions complement each other, a PID controller can achieve fast response, high accuracy, and stable operation even when system dynamics are nonlinear or uncertain. It does not  require complex optimization or advanced modeliing, which makes it extremely practical for real-world systems sucha as DC motors, where loads and operating conditions frequently change.
 
 ## The Three PID Components
 
