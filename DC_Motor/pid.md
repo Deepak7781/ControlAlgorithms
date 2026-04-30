@@ -171,13 +171,3 @@ Derivative adds "damping" to the control system, similar to a shock absorber.
 Mathematically,it counteracts high frequency changes:
 
 * If error oscillates, derivative becomes large &rarr; D pushes back &rarr; damping oscillations
-
-**Why D is sensitive to noise**
-
-Error signal directly differentiates noise:
-
-$$
-    \frac{d(noise)}{dt} \approx \text{huge spikes}
-$$
-
-Hence real controllers use filtered derivative instead of pure derivative.
