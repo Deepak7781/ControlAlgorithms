@@ -7,3 +7,5 @@ The inverted pendulum is one of the most important benchmark problems in dynamic
 ## System Description
 
 The system has a cart of mass $M$ that slides horizontally, with a pendulum of mass $m$ and length $l$ pinned at the cart's center. The control input is the horizontal force F applied to the cart. The state variables are cart position $x$, cart velocity $\dot{x}$, pendulum angle $\theta$ (from vertical) and angular velocity $\dot{\theta}$  
+
+![Inverted Pendulum System](diagram.png)
