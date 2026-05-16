@@ -335,3 +335,77 @@ $$
 $$
 
 These equations completely describe the nonlinear coupled dynamics of the inverted pendulum system.
+
+## Linearization of Nonlinear Eqautions of Motion
+
+### Need for Linearization
+
+The non-linear equations describe the exact dynamics of the system over thr entire operating range.
+
+However, the Linear Quadratic Regulator (LQR) is derived for systems represented in the linear form
+
+$$
+    \dot{X} = Ax + Bu
+$$
+
+Hence, the nonlinear equations must forst be linearized.
+
+The objective of linearization is to approximate the nonlinear system by a linear system near a chosen operating point.
+
+For the inverted pendulum, the operating point is the upright equilibrium configuration.
+
+### Upright Equilibrium Configuration
+
+The upright equilibrium corresponds to:
+- $x=0$
+- $\dot{x}=0$
+- $\theta = 0$
+- $\dot{\theta} = 0$
+- $F = 0$
+
+At this condition: 
+- the cart is stationary
+- the pendulum is perfectly upright
+- no control force is applied
+
+The controller is designed to maintain the system near this equilibrium position.
+
+### Small Angle Approximation
+
+Since the pendulum operates near the upright equilibrium position, the angular displacement remains small.
+
+For small values of $\theta$
+
+$$
+    \sin\theta \approx \theta
+$$
+
+$$
+    \cos\theta \approx 1
+$$
+
+Also, $\sin^2\theta \approx 0$
+
+Higher-order nonlinear terms are neglected. In particular, $\dot{\theta}^2\sin\theta$ is neglected because it is a higher nonlinear term.
+
+### Linearization of Cart Equation
+
+Starting with the nonlinear cart equation,
+
+$$
+    (M+m)\ddot{x} + ml\ddot{\theta}\cos\theta - ml\dot{\theta}^2\sin\theta = F
+$$
+
+Applying small-angle approximations, $\cos\theta \approx 1$ and neglecting $\dot{\theta}^2\sin\theta$
+
+gives,
+
+$$
+    (M+m)\ddot{x} + ml\ddot{\theta} = F
+$$
+
+Thus, the linearized cart equations becomes,
+
+$$
+    \boxed{(M+m)\ddot{x} + ml\ddot{\theta} = F}
+$$
