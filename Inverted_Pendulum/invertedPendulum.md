@@ -169,3 +169,97 @@ $$
                 lcos\theta
                 \end{bmatrix}
 $$
+
+Dividing by $l$, the radial unit vector becomes
+
+$$
+    \hat{e}_r = \begin{bmatrix}
+                \sin\theta \\
+                \cos\theta
+                \end{bmatrix}
+$$
+
+The tangential direction must always be perpendicular to the radial direction.
+
+Rotating the radial vector by $90 \degree$ clockwise gives the tangential unit vector.
+
+$$
+    \hat{e}_t = \begin{bmatrix}
+                \cos\theta \\
+                -\sin\theta
+                \end{bmatrix}
+$$
+
+This vector points along the direction of increasing $\theta$
+
+### Acceleration of the Pendulum Mass
+
+From the previous derivation,
+
+$$
+    \ddot{x}_p = \ddot{x} + l\ddot{\theta}\cos\theta - l\dot{\theta}^2\sin\theta
+$$
+
+$$
+    \ddot{y}_p = -l\ddot{\theta}\sin\theta - l\dot{\theta}^2\cos\theta
+$$
+
+Therefore, the acceleration vector of the pendulum mass is,
+
+$$
+    \vec{a}_p = \begin{bmatrix}
+                \ddot{x}_p \\
+                \ddot{y}_p
+                \end{bmatrix}
+$$
+
+Substituting the acceleration components,
+
+$$
+    \vec{a}_p = \begin{bmatrix}
+                \ddot{x} + l\ddot{\theta}\cos\theta - l\dot{\theta}^2\sin\theta \\
+                -l\ddot{\theta}\sin\theta - l\dot{\theta}^2\cos\theta
+                \end{bmatrix}
+$$
+
+### Tangential Acceleration
+
+The tangential acceleration is the component of total acceleration along the tangential direction.
+
+This is obtained using the dot product between the acceletration vector and the tangential unit vector.
+
+Thus, 
+
+$$
+    a_t = \vec{a}_p \cdot \hat{e}_t
+$$
+
+$$
+    a_t = \begin{bmatrix}
+                \ddot{x} + l\ddot{\theta}\cos\theta - l\dot{\theta}^2\sin\theta \\
+                -l\ddot{\theta}\sin\theta - l\dot{\theta}^2\cos\theta
+                \end{bmatrix}
+
+                \cdot
+
+                \begin{bmatrix}
+                \cos\theta \\
+                -\sin\theta
+                \end{bmatrix}
+$$
+
+$$
+    a_t = (\ddot{x} + l\ddot{\theta}\cos\theta - l\dot{\theta}^2\sin\theta)\cos\theta - (-l\ddot{\theta}\sin\theta - l\dot{\theta}^2\cos\theta)\sin\theta
+$$
+
+$$
+    a_t = \ddot{x}\cos\theta + l\ddot{\theta}\cos^2\theta - l\dot{\theta}^2\sin\theta\cos\theta + l\ddot{\theta}\sin^2\theta + l\dot{\theta}^2\sin\theta\cos\theta
+$$
+
+$$
+    a_t = \ddot{x}\cos\theta + l\ddot{\theta}(\sin^2\theta + \cos^2\theta)
+$$
+
+$$
+    a_t = \ddot{x}\cos\theta+l\ddot{\theta}
+$$
