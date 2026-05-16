@@ -94,7 +94,45 @@ $$
 Hence, 
 
 $$
-    R_x = \ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta
+    R_x = m\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta
 $$
 
+## Free Body Diagram of the Cart
 
+Now consider tge cart of mass M
+
+The horizontal forces acting on the cart are:
+- Applied control force $F$
+- Reaction force from pendulum $R_x$
+
+Applying Newton's second law
+
+$$
+    \Sigma F_x = m \ddot{x}
+$$
+
+Therefore,
+
+$$
+    F - R_x = M \ddot{x}
+$$
+
+sub $R_x$
+
+$$
+F - (m\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta) = M \ddot{x}
+$$
+
+$$
+F = M \ddot{x} + (m\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta)
+$$
+
+$$
+F = (M+m)\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta
+$$
+
+Thus the first nonlinear equation of motion becomes,
+
+$$
+    \boxed{(M+m)\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta=F}
+$$
