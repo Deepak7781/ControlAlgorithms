@@ -63,3 +63,38 @@ $$
 $$
 
 These equations represent the horizontal and vertical accelerations of the pendulum mass.
+
+## Free body diagram of the pendulum mass
+
+Considering the forces acting on the pendulum mass,
+
+The forces acting on the pendulum mass are:
+- Horizontal reaction force at pivot $R_x$
+- Vertical reaction force at pivot $R_y$
+- Weight of pendulum $mg$
+
+Appyling Newton's second law in horizontal direction,
+
+$$
+    \Sigma F_x = m \ddot{x}_p 
+$$
+
+Therefeore, 
+
+$$
+    R_x = m \ddot{x}_p
+$$
+
+sub $\ddot{x}_p$
+
+$$
+    R_x = m(\ddot{x} + l\ddot{\theta}cos\theta - l\dot{\theta}^2sin\theta)
+$$
+
+Hence, 
+
+$$
+    R_x = \ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta
+$$
+
+
