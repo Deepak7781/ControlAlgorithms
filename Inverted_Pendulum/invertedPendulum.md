@@ -555,3 +555,92 @@ X = \begin{bmatrix}
 $$
 
 ### Formation of First-Order Stae Equations
+
+Using the state definitions,
+
+$$
+    \dot{x}_1 = x_2
+$$
+
+$$
+    \dot{x}_3 = x_4
+$$
+
+From the acceleration equations,
+
+$$
+    \dot{x}_2 = \frac{-mg}{M}x_3 + \frac{1}{M}F
+$$
+
+$$
+    \dot{x}_4 = \frac{(M+m)g}{Ml}x_3- \frac{1}{Ml}F
+$$
+
+Therefore, the complete first-order state equations become,
+
+$$
+    \dot{x}_1 = x_2
+$$
+
+$$
+    \dot{x}_2 = \frac{-mg}{M}x_3 + \frac{1}{M}F
+$$
+
+$$
+    \dot{x}_3 = x_4
+$$
+
+$$
+    \dot{x}_4 = \frac{(M+m)g}{Ml}x_3- \frac{1}{Ml}F
+$$
+
+### Matrix State-Space Representation
+
+The equations may now be written in standard state-space form
+
+$$
+    \dot{X} = AX + BF
+$$
+
+Wrinting the above four equations in matrix form
+
+$$
+    \begin{bmatrix}
+    \dot{x}_1 \\ \dot{x}_2 \\ \dot{x}_3 \\ \dot{x}_4
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0 & 1 & 0 & 0 \\
+    0 & 0 & \frac{-mg}{M} & 0 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & \frac{(M+m)g}{Ml} & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_1 \\ x2 \\ x_3 \\ x_4
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+    0 \\ \frac{1}{M} \\ 0 \\ \frac{-1}{Ml}
+    \end{bmatrix}
+    \begin{bmatrix}
+    F
+    \end{bmatrix}
+$$
+
+From the above form,
+
+$$
+    A = \begin{bmatrix}
+    0 & 1 & 0 & 0 \\
+    0 & 0 & \frac{-mg}{M} & 0 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & \frac{(M+m)g}{Ml} & 0
+    \end{bmatrix}
+$$
+
+$$
+    B =     \begin{bmatrix}
+    0 \\ \frac{1}{M} \\ 0 \\ \frac{-1}{Ml}
+    \end{bmatrix}
+$$
+
