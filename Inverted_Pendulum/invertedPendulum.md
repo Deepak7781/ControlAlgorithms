@@ -263,3 +263,75 @@ $$
 $$
     a_t = \ddot{x}\cos\theta+l\ddot{\theta}
 $$
+
+### Tangential Component of Gravity
+
+The weight vector acting on the pendulum mass is,
+
+$$
+    \vec{W} = \begin{bmatrix}
+                0 \\
+                -mg
+                \end{bmatrix}
+$$
+
+The tangential component of gravity is obtained by projecting the weight vector onto the tangential direction.
+
+Thus,
+
+$$
+    W_t = \vec{W}\cdot\hat{e}_t
+$$
+
+$$
+    W_t = \begin{bmatrix}
+                0 \\
+                -mg
+                \end{bmatrix} \cdot
+                \begin{bmatrix}
+                \cos\theta \\
+                -\sin\theta
+                \end{bmatrix}
+$$
+
+$$
+    W_t = mg\sin\theta
+$$
+
+This is the component of gravity responsible for rotating the pendulum.
+
+### Applying Newton's Second Law in Tangential Direction
+
+$$
+    \Sigma F_t = m a_t
+$$
+
+Substituting the tangential force and tangential aceleration.
+
+$$
+    mg\sin\theta = m(\ddot{x}\cos\theta+l\ddot{\theta})
+$$
+
+$$
+ g\sin\theta = (\ddot{x}\cos\theta+l\ddot{\theta})
+$$
+
+$$
+ \boxed{l\ddot{\theta} + \ddot{x}\cos\theta - g\sin\theta = 0}
+$$
+
+This is the nonlinear angular equation of motion of the inverted pendulum system.
+
+## Final Nonlinear Equations of Motion 
+
+Hence, the complete nonlinear mathematical model of the inverted pendulum system is given by
+
+$$
+    \boxed{(M+m)\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta=F}
+$$
+
+$$
+ \boxed{l\ddot{\theta} + \ddot{x}\cos\theta - g\sin\theta = 0}
+$$
+
+These equations completely describe the nonlinear coupled dynamics of the inverted pendulum system.
