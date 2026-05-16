@@ -9,3 +9,57 @@ The inverted pendulum is one of the most important benchmark problems in dynamic
 The system has a cart of mass $M$ that slides horizontally, with a pendulum of mass $m$ and length $l$ pinned at the cart's center. The control input is the horizontal force F applied to the cart. The state variables are cart position $x$, cart velocity $\dot{x}$, pendulum angle $\theta$ (from vertical) and angular velocity $\dot{\theta}$  
 
 ![Inverted Pendulum System](diagram.png)
+
+## Coordinate System and Sign Convention
+
+Let, 
+- $x$ = horizontal displacement of the cart
+- $\theta$ = angular displacement of the pendulum measured from the vertical
+
+where positive $x$ direction is towards the right and positive $\theta$ direction is taken clockwise from the upward vertical position.
+
+The pendulum is assumed to be a rigid rod of length $l$ with point mass $m$ concentrated at its end. The cart is free to move only in the horizontal direction.
+
+## Position of the Pendulum mass
+
+The coordinates of the pendulum mass can be wriiten using simple trigonometry.
+
+Horizontal position of the pendulum mass:
+
+$$
+    x_p = x + lsin\theta
+$$
+
+Vertical position of the pendulum mass:
+
+$$
+    y_p = lcos\theta
+$$
+
+where, 
+- $x_p$ = horizontal position of pendulum mass
+- $y_p$ = vertical position of the epndulum mass
+
+## Velocity of the pendulum mass
+
+Differentiating the position equations with respect to time,
+
+$$
+    \dot{x}_p = \dot{x} + l\dot{\theta}cos\theta
+$$
+
+$$
+    \dot{y}_p = -l\dot{\theta}sin\theta
+$$
+
+Again Differentiating,
+
+$$
+    \ddot{x}_p = \ddot{x} + l\ddot{\theta}cos\theta - l\dot{\theta}^2sin\theta
+$$
+
+$$
+    \ddot{y}_p = -l\ddot{\theta}sin\theta - l\dot{\theta}^2cos\theta
+$$
+
+These equations represent the horizontal and vertical accelerations of the pendulum mass.
