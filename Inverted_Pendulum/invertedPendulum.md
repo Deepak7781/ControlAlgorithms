@@ -606,7 +606,10 @@ Wrinting the above four equations in matrix form
 
 $$
     \begin{bmatrix}
-    \dot{x}_1 \\ \dot{x}_2 \\ \dot{x}_3 \\ \dot{x}_4
+    \dot{x}_1 \\ 
+    \dot{x}_2 \\ 
+    \dot{x}_3 \\ 
+    \dot{x}_4
     \end{bmatrix}
     =
     \begin{bmatrix}
@@ -616,7 +619,10 @@ $$
     0 & 0 & \frac{(M+m)g}{Ml} & 0
     \end{bmatrix}
     \begin{bmatrix}
-    x_1 \\ x2 \\ x_3 \\ x_4
+    x_1 \\ 
+    x2 \\ 
+    x_3 \\ 
+    x_4
     \end{bmatrix}
     +
     \begin{bmatrix}
@@ -640,7 +646,10 @@ $$
 
 $$
     B =     \begin{bmatrix}
-    0 \\ \frac{1}{M} \\ 0 \\ \frac{-1}{Ml}
+    0 \\ 
+    \frac{1}{M} \\ 
+    0 \\ 
+    \frac{-1}{Ml}
     \end{bmatrix}
 $$
 
