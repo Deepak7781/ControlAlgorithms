@@ -409,3 +409,55 @@ Thus, the linearized cart equations becomes,
 $$
     \boxed{(M+m)\ddot{x} + ml\ddot{\theta} = F}
 $$
+
+### Linearization of Pendulum Equation
+
+The nonlinear pendulum equation is,
+
+$$
+    l\ddot{\theta} + \ddot{x}\cos\theta - g\sin\theta = 0
+$$
+
+Applying the approximations,
+
+$$
+    \cos\theta \approx 1
+$$
+
+$$
+    \sin\theta \approx \theta
+$$
+
+gives,
+
+$$
+    l\ddot{\theta} + \ddot{x}\ - g\theta = 0
+$$
+
+Thus, the linearized pendulum equation becomes,
+
+$$
+    \boxed{l\ddot{\theta} + \ddot{x}\ - g\theta = 0}
+$$
+
+### Linearized Equations of Motion
+
+The complete set of linearization equations is therefore:
+
+Cart Equation,
+
+$$
+    \boxed{(M+m)\ddot{x} + ml\ddot{\theta} = F}
+$$
+
+Pendulum Equation,
+
+$$
+    \boxed{l\ddot{\theta} + \ddot{x}\ - g\theta = 0}
+$$
+
+The equations describe the system dynamics near the upright equilibrium position.
+
+## State-Space Model
+
+### Solving for $\ddot{x}$ and $\ddot{\theta}$
