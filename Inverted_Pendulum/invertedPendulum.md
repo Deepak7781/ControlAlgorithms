@@ -144,3 +144,28 @@ To derive the angular equation of motion, Newtons second law is applied in the t
 Before directly applying Newton's law, it is important to understand how the tangential direction is obtained.
 
 ### Radial and Tangential Directions
+
+The pendulum moves along a circular path of radius $l$. 
+
+For any body moving in a circular path, the motion can be resolved into two mutually perpendicular directions:
+- Radial direction
+- Tangential direction
+
+The radial direction is along the pendulum rod toward the pivot.
+
+The tangential direction is perpendicular to the rod and along the instantaneous direction of motion of the pendulum mass. 
+
+Since the angular displacement of the pendulum is represented by $\theta$, the tangential direction is the direction in which $\theta$ increases.
+
+### Tangential Unit Vector
+
+The pendulum rod makes an angle $\theta$ with the vertical.
+
+The position vector of the pendulum mass from the pivot is,
+
+$$
+    \vec{r} = \begin{bmatrix}
+                lsin\theta \\
+                lcos\theta
+                \end{bmatrix}
+$$
