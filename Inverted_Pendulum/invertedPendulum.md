@@ -136,3 +136,11 @@ Thus the first nonlinear equation of motion becomes,
 $$
     \boxed{(M+m)\ddot{x} + ml\ddot{\theta}cos\theta - ml\dot{\theta}^2sin\theta=F}
 $$
+
+## Tangential Motion of the Pendulum
+
+To derive the angular equation of motion, Newtons second law is applied in the tangential direction of the pendulum motion.
+
+Before directly applying Newton's law, it is important to understand how the tangential direction is obtained.
+
+### Radial and Tangential Directions
