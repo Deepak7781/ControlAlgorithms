@@ -461,3 +461,97 @@ The equations describe the system dynamics near the upright equilibrium position
 ## State-Space Model
 
 ### Solving for $\ddot{x}$ and $\ddot{\theta}$
+
+From Pendulum equation, 
+
+$$
+    \ddot{x} = g\theta - l\ddot{\theta}
+$$
+
+Substituting into Cart equation
+
+$$
+    (M + m)(g\theta - l\ddot{\theta}) + ml\ddot{\theta} = F
+$$
+
+$$
+    (M + m)g\theta - (M + m)l\ddot{\theta} + ml\ddot{\theta} = F
+$$
+
+$$
+    (M+m)g\theta - Ml\dot{\theta} - ml\ddot{\theta} + ml\ddot{\theta} = F
+$$
+
+$$
+    (M+m)\ddot{\theta} - Ml\ddot{\theta} = F
+$$
+
+$$
+    Ml\ddot{\theta} = (M+m)g\theta - F
+$$
+
+$$
+    \boxed{\ddot{\theta} = \frac{(M+m)g\theta}{Ml} - \frac{1}{Ml}F}
+$$
+
+Substituting $\ddot{\theta}$ back to the pendulum equation
+
+$$
+    \ddot{x} = g\theta - l\left(\frac{(M+m)g\theta}{Ml} - \frac{1}{Ml}F\right)
+$$
+
+$$
+    \ddot{x} = g\theta - \frac{(M+m)g\theta}{M} + \frac{1}{M}F
+$$
+
+$$
+    \ddot{x} = g\theta - \frac{Mg\theta}{M} - \frac{mg\theta}{M} +\frac{1}{M}F
+$$
+
+$$
+    \ddot{x} = \frac{-mg\theta}{M} + \frac{1}{M}F
+$$
+
+Thus,
+
+$$
+    \boxed{\ddot{x} = \frac{-mg\theta}{M} + \frac{1}{M}F}
+$$
+
+### Formation of State variables
+
+The system currently consists of second-order differential equations.
+
+State-space representaion requires first-order equations.
+
+Hence the following state variables are defined:
+
+$$
+x_1 = x
+$$
+
+$$
+x_2 = \dot{x}
+$$
+
+$$
+x_3 = \theta
+$$
+
+$$
+x_4 = \dot{\theta}
+$$
+
+Thus, the state vector becomes
+
+$$
+X = \begin{bmatrix}
+        x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x \\ \dot{x} \\ \theta \\ \dot{\theta}
+    \end{bmatrix}
+$$
+
+### Formation of First-Order Stae Equations
