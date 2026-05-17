@@ -20,7 +20,10 @@ D = zeros(4,1);
 G = ss(A, B, C, D);
 
 % Choose Q and R
-Q = eye(4);
+Q = [1 0 0 0;
+     0 1 0 0;
+     0 0 100 0;
+     0 0 0 1];
 
 R = 0.01;
 
@@ -29,8 +32,11 @@ R = 0.01;
 
 % Form the Closed Loop Model
 
-cl_sys = feedback(K*G, 1);
+cl_sys = feedback(G, K);
 
 x0 = [0; 0; 0.1; 0];
 % 0.1 rad ≈ 5.7° perturbation
-initial(cl_sys, x0)
+[y, tout] = initial(cl_sys, x0);
+
+y_deg = y*(180/pi);
+%plot(tout, y);
