@@ -28,9 +28,3 @@ R = 0.01;
 [K, S, E] = lqr(A, B, Q, R);
 
 % Form the Closed Loop Model
-
-cl_sys = feedback(K*G, 1);
-
-x0 = [0; 0; 0.1; 0];
-% 0.1 rad ≈ 5.7° perturbation
-initial(cl_sys, x0)
