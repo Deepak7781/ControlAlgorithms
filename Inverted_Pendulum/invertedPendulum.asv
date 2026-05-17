@@ -31,16 +31,12 @@ R = 0.01;
 [K, S, E] = lqr(A, B, Q, R);
 
 % Form the Closed Loop Model
+
 cl_sys = feedback(G, K);
 
-% Response for Initial Disturbance
-x0 = [0; 0; 0.1; 0]; % 0.1 rad ≈ 5.7° perturbation
+x0 = [0; 0; 0.1; 0];
+% 0.1 rad ≈ 5.7° perturbation
 [y, tout] = initial(cl_sys, x0);
-y_theta_deg = y(:,3)*(180/pi);
 
-% Plotting Upright Equilibrium
-plot(tout, y_theta_deg);
-xlabel("Time (s)");
-ylabel("Theta (degree)");
-grid on;
-
+y_deg_theta = y()*(180/pi);
+%plot(tout, y);
