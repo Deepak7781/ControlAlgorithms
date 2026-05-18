@@ -644,12 +644,3 @@ $$
     \end{bmatrix}
 $$
 
-$$
-    B =     \begin{bmatrix}
-    0 \\ 
-    \frac{1}{M} \\ 
-    0 \\ 
-    \frac{-1}{Ml}
-    \end{bmatrix}
-$$
-
