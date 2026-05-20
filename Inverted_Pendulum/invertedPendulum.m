@@ -34,7 +34,7 @@ R = 0.01;
 cl_sys = feedback(G, K);
 
 % Response for Initial Disturbance
-x0 = [0; 0; 0.3; 0]; % 0.1 rad ≈ 5.7° perturbation
+x0 = [0; 0; 0.1; 0]; 
 [y, tout] = initial(cl_sys, x0);
 y_theta_deg = y(:,3)*(180/pi);
 
