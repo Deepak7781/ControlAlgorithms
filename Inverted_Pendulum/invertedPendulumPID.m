@@ -18,3 +18,5 @@ C = eye(4);
 D = zeros(4,1);
 
 G = ss(A, B, C, D);
+
+G_tf = tf(G);
