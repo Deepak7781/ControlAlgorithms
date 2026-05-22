@@ -684,3 +684,32 @@ $$
     s^2X(s) + (ls^2 - g)\Theta(s) = 0
 $$
 
+$$
+    s^2X(s) =  -(ls^2-g)\Theta(s)
+$$
+
+$$
+    X(s) = \frac{-(ls^2-g)}{s^2}\Theta(s)
+$$
+
+Sub $X(s)$
+
+$$
+    (M+m)\left(\frac{ls^2-g}{s^2}\Theta(s)\right) + mls^2\Theta(s) = F(s)
+$$
+
+$$
+    (M+m)(g-ls^2)\Theta(s) + mls^2\Theta(s) = F(s)
+$$
+
+$$
+[(M+m)g - (M+m)ls^2 + mls^2]\Theta(s) = F(s)
+$$
+
+$$
+    [(M+m)g - Mls^2]\Theta(s) = F(s)
+$$
+
+$$
+    \frac{\Theta(s)}{F(s)} = \frac{1}{(M+m)g - Mls^2}
+$$
