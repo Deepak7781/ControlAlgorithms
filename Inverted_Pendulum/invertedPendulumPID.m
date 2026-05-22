@@ -8,3 +8,4 @@ l = 1; % Length of the pendulum in m
 % Building the state space model
 s = tf('s');
 G = 1/((M+m)*g - M*l*s^2);
+
