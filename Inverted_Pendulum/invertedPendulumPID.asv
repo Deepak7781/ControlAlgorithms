@@ -18,4 +18,4 @@ cl_sys = feedback(C*G, 1);
 step(cl_sys)
 grid on
 
-% The code above is wrong
+% 
