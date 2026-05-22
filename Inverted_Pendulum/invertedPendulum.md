@@ -653,3 +653,34 @@ $$
     \end{bmatrix}
 $$
 
+## Transfer Function Model 
+
+From the linearized Equations:
+
+$$
+    (M+m)\ddot{x} + ml\ddot{\theta} = F
+$$
+
+$$
+    l\ddot{\theta} + \ddot{x}\ - g\theta = 0
+$$
+
+- Input: Force, $F$
+- Output: Angle from vertical, $\theta$
+
+Take Laplace Tranform for the two equations,
+
+$$
+    (M+m)s^2X(s) + mls^2 \Theta(s) = F(s)
+$$
+
+$$
+    s^2l\Theta(s) + s^2X(s) - g\Theta(s) = 0
+$$
+
+So, 
+
+$$
+    s^2X(s) + (ls^2 - g)\Theta(s) = 0
+$$
+
