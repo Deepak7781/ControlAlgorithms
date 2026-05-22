@@ -9,3 +9,12 @@ l = 1; % Length of the pendulum in m
 s = tf('s');
 G = 1/((M+m)*g - M*l*s^2);
 
+Kp = 10;
+Ki = 0.5;
+Kd = 5;
+
+C = pid(Kp, Ki, Kd);
+
+cl_sys = feedback(G, C);
+
+step(cl_sys)
