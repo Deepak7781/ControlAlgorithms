@@ -57,6 +57,8 @@ def update(frame):
     dog.set_data([x_dog[frame]], [y_dog[frame]])
     start = max(0, frame - Trail_Length)
     dogTrail.set_data(x_dog[start:frame+1], y_dog[start:frame+1])
+    if R <= 0.001:
+        ax.text(0, 0, "Dog Caught Duck", fontsize=15)
 
     return duck, dog, dogTrail,
 
