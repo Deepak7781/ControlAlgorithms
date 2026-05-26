@@ -18,6 +18,8 @@ y_duck = []
 x_dog = []
 y_dog = []
 
+R_hist = []
+
 k = 1.2 # Speed ratio (Dog speed/Duck speed)
 for i in range(len(Tsim)):
 
@@ -26,6 +28,8 @@ for i in range(len(Tsim)):
 
     x_dog.append(x_duck[i] - (R*np.cos(theta + phi)))
     y_dog.append(y_duck[i] - (R*np.sin(theta + phi)))
+
+    R_hist.append(R)
 
     dRdtheta = np.sin(phi) - k
     dphidtheta = (np.cos(phi)/R) - 1
@@ -57,9 +61,8 @@ def update(frame):
     dog.set_data([x_dog[frame]], [y_dog[frame]])
     start = max(0, frame - Trail_Length)
     dogTrail.set_data(x_dog[start:frame+1], y_dog[start:frame+1])
-    if R <= 0.001:
+    if R_hist[frame] <= 0.1:
         ax.text(0, 0, "Dog Caught Duck", fontsize=15)
-
     return duck, dog, dogTrail,
 
 ani = FuncAnimation(fig, update, frames = len(Tsim), interval = dt, blit = True)
