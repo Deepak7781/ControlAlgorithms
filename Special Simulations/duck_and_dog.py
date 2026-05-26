@@ -39,12 +39,9 @@ for i in range(len(Tsim)):
     phi = phi + dphidtheta*dt
     theta = theta + dt
 
-    try:
-        if R <= 0.001:
-            break
-    except IndexError:
-        print("Dog Caught the Duck")
-       
+    if R <= 0.001:
+        print("Dog caught the duck")
+        break
 
 
 fig, ax = plt.subplots()
@@ -68,5 +65,7 @@ def update(frame):
     return duck, dog, dogTrail,
 
 ani = FuncAnimation(fig, update, frames = len(Tsim), interval = dt, blit = True)
+
+
 
 plt.show()
