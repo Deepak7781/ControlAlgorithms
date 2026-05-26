@@ -20,7 +20,7 @@ y_dog = []
 
 R_hist = []
 
-k = 1.2 # Speed ratio (Dog speed/Duck speed)
+k = 1.5 # Speed ratio (Dog speed/Duck speed)
 for i in range(len(Tsim)):
 
     x_duck.append(np.cos(theta))
@@ -52,6 +52,7 @@ ax.grid(True)
 duck, = ax.plot([], [], 'mo', label = "Duck")
 dog, = ax.plot([], [], color = 'brown', marker = 'o', label = "Dog")
 dogTrail, = ax.plot([], [], color = 'saddlebrown', linewidth = 1, label = "Dog Trail")
+message = ax.text(0,0,"",fontsize=15,   ha='center')
 ax.axis('equal')
 ax.legend(loc = 'best')
 
@@ -62,8 +63,8 @@ def update(frame):
     start = max(0, frame - Trail_Length)
     dogTrail.set_data(x_dog[start:frame+1], y_dog[start:frame+1])
     if R_hist[frame] <= 0.1:
-        ax.text(0, 0, "Dog Caught Duck", fontsize=15)
-    return duck, dog, dogTrail,
+        message.set_text("Dog Caught Duck!")
+    return duck, dog, dogTrail, message
 
 ani = FuncAnimation(fig, update, frames = len(Tsim), interval = dt, blit = True)
 
