@@ -52,7 +52,6 @@ ax.grid(True)
 duck, = ax.plot([], [], 'mo', label = "Duck")
 dog, = ax.plot([], [], color = 'brown', marker = 'o', label = "Dog")
 dogTrail, = ax.plot([], [], color = 'saddlebrown', linewidth = 1, label = "Dog Trail")
-message = ax.text(0,0,"",fontsize=15,   ha='center')
 ax.axis('equal')
 ax.legend(loc = 'best')
 
@@ -62,7 +61,7 @@ def update(frame):
     dog.set_data([x_dog[frame]], [y_dog[frame]])
     start = max(0, frame - Trail_Length)
     dogTrail.set_data(x_dog[start:frame+1], y_dog[start:frame+1])
-    return duck, dog, dogTrail, message
+    return duck, dog, dogTrail,
 
 ani = FuncAnimation(fig, update, frames = len(Tsim), interval = dt, blit = True)
 
