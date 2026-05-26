@@ -39,3 +39,27 @@ for i in range(len(Tsim)):
         break
 
 
+fig, ax = plt.subplots()
+ax.set_xlim(-1.5, 1.5)
+ax.set_ylim(-1.5, 1.5)
+ax.plot(np.cos(np.linspace(0,2*np.pi, 1000)), np.sin(np.linspace(0,2*np.pi, 1000)), 'k--', linewidth=1, label="Pond Boundary")
+ax.grid(True)
+
+duck, = ax.plot([], [], 'mo', label = "Duck")
+dog, = ax.plot([], [], color = 'brown', marker = 'o', label = "Dog")
+dogTrail, = ax.plot([], [], color = 'saddlebrown', linewidth = 1, label = "Dog Trail")
+ax.axis('equal')
+ax.legend(loc = 'best')
+
+Trail_Length = 500
+def update(frame):
+    duck.set_data([x_duck[frame]], [y_duck[frame]])
+    dog.set_data([x_dog[frame]], [y_dog[frame]])
+    start = max(0, frame - Trail_Length)
+    dogTrail.set_data(x_dog[start:frame+1], y_dog[start:frame+1])
+
+    return duck, dog, dogTrail,
+
+ani = FuncAnimation(fig, update, frames = len(Tsim), interval = dt, blit = True)
+
+plt.show()
