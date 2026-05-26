@@ -39,8 +39,12 @@ for i in range(len(Tsim)):
     phi = phi + dphidtheta*dt
     theta = theta + dt
 
-    if R <= 0.001:
-        break
+    try:
+        if R <= 0.001:
+            break
+    except IndexError:
+        print("Dog Caught the Duck")
+       
 
 
 fig, ax = plt.subplots()
