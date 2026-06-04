@@ -20,7 +20,7 @@ y_dog = []
 
 R_hist = []
 
-k = 1.5 # Speed ratio (Dog speed/Duck speed)
+k = 1 # Speed ratio (Dog speed/Duck speed)
 for i in range(len(Tsim)):
 
     x_duck.append(np.cos(theta))
