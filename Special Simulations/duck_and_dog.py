@@ -50,7 +50,7 @@ ax.grid(True)
 
 duck, = ax.plot([], [], 'r*',markersize =10, label = "Duck")
 dog, = ax.plot([], [], color = 'magenta', marker = 'o', markersize = 5, label = "Dog")
-dogTrail, = ax.plot([], [], color = 'saddlebrown', linewidth = 1, label = "Dog Trail")
+dogTrail, = ax.plot([], [], color = 'magenta', linewidth = 1, label = "Dog Trail")
 ax.axis('equal')
 ax.legend(loc = 'best')
 
