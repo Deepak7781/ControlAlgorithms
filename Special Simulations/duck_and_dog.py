@@ -49,7 +49,7 @@ ax.plot(np.cos(np.linspace(0,2*np.pi, 1000)), np.sin(np.linspace(0,2*np.pi, 1000
 ax.grid(True)
 
 duck, = ax.plot([], [], 'mo', label = "Duck")
-dog, = ax.plot([], [], color = 'brown', marker = 'o', label = "Dog")
+dog, = ax.plot([], [], color = 'brown', marker = 'o', markersize = 10, label = "Dog")
 dogTrail, = ax.plot([], [], color = 'saddlebrown', linewidth = 1, label = "Dog Trail")
 ax.axis('equal')
 ax.legend(loc = 'best')
