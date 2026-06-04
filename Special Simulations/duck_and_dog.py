@@ -54,13 +54,13 @@ dogTrail, = ax.plot([], [], color = 'saddlebrown', linewidth = 1, label = "Dog T
 ax.axis('equal')
 ax.legend(loc = 'best')
 
-Trail_Length = 500
+
 
 def update(frame):
     duck.set_data([x_duck[frame]], [y_duck[frame]])
     dog.set_data([x_dog[frame]], [y_dog[frame]])
-    start = max(0, frame - Trail_Length)
-    dogTrail.set_data(x_dog[start:frame+1], y_dog[start:frame+1])
+
+    dogTrail.set_data(x_dog[:frame+1], y_dog[:frame+1])
     return duck, dog, dogTrail,
 ani = FuncAnimation(fig, update, frames = len(x_dog), interval = dt, blit = True)
 
